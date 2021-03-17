@@ -63,4 +63,6 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
+  # Allow Rails path helpers in request specs
+  config.include Rails.application.routes.url_helpers, type: :request
 end
